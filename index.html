@@ -936,12 +936,167 @@
     </div>
 
     <script>
-        // Dados dos técnicos
+        // Dados completos dos técnicos
         const tecnicosData = [
             { uf: "SC", tr: "TR738176", tt: "TT813390", funcionario: "RICARDO LUIZ JABLONSKI", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
             { uf: "SC", tr: "TR454198", tt: "TT822909", funcionario: "FERNANDO GALLON", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
             { uf: "SC", tr: "TR817750", tt: "TT817616", funcionario: "LEANDRO DE SOUZA ASSUNCAO", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
-            { uf: "SC", tr: "TR750220", tt: "TT750220", funcionario: "TUAN LOPES FAGUNDES PEREIRA", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.PAC.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" }
+            { uf: "SC", tr: "TT813649", tt: "TT813649", funcionario: "MARCOS DA SILVA CARRILHO", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR618415", tt: "TT618415", funcionario: "SILVIO GARCIA", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR791113", tt: "TT791113", funcionario: "ALLAN GILBERTO DOS SANTOS SOUZA", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR804222", tt: "TT804222", funcionario: "ELIELSON DA SILVA ALVES", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR533230", tt: "TT828851", funcionario: "LUIZ FILIPI FERREIRA DA SILVA", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "7", tt: "3", funcionario: "RAFAEL LOPES DOS SANTOS", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.FNS.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR750220", tt: "TT750220", funcionario: "TUAN LOPES FAGUNDES PEREIRA", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.PAC.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR810966", tt: "TT811185", funcionario: "CHRISTIAN NUNES MACHADO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.PAC.11", coordenador: "MAURI DUTRA", municipio: "PALHOCA" },
+            { uf: "SC", tr: "TR790154", tt: "TT790154", funcionario: "FABIO DE SOUZA BARBOSA", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.PAC.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR794904", tt: "TT794904", funcionario: "GIOVANI DA SILVA ANTUNES", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR695590", tt: "TT695590", funcionario: "LEONARD DAUM CARRASCO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.PAC.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TT821513", tt: "TR818957", funcionario: "GABRIEL PEREIRA SALAZAR", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR819188", tt: "TT822112", funcionario: "GUSTAVO CLAUDIONOR SOARES", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR798959", tt: "TT798959", funcionario: "IGOR SANTOS DA SILVA", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TT720812", tt: "TT720812", funcionario: "PABLO JAHN ALVES", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR812670", tt: "TT813648", funcionario: "JESSE MONTEIRO DE SOUZA JUNIOR", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR525780", tt: "TT828845", funcionario: "CARLOS RODRIGO DE SOUZA", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR628392", tt: "TT829089", funcionario: "MAIKON TEODORO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "2", tt: "TT829508", funcionario: "ALESSANDRO AMARAL DA CONCEICAO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR789652", tt: "TT789652", funcionario: "JOSE LUIZ NERE GOMES FILHO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.LESTE.SOO.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TT695480", tt: "TT695480", funcionario: "EVANDRO SILVA JUSTO", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR577116", tt: "TT577116", funcionario: "RODRIGO MELLO DA SILVA", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR818961", tt: "TT821516", funcionario: "VAGNER DO NASCIMENTO GIVIGI", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "PALHOCA" },
+            { uf: "SC", tr: "TR797822", tt: "TT797822", funcionario: "ANDERSON LUIS SCHNEIDERS BATISTA", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR614972", tt: "TT614972", funcionario: "EDUARDO DIAS FERNANDES", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR809136", tt: "TT809136", funcionario: "MAIKON GONCALVES MARTINS", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR791263", tt: "TT791263", funcionario: "PAOLO ARRUE DE MELO", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR821743", tt: "TT828853", funcionario: "RAFAEL LA BELLA PEDROSO", supervisor: "GREGORI SOUZA", setor: "SC.LESTE.TRD.11", coordenador: "MAURI DUTRA", municipio: "FLORIANOPOLIS" },
+            { uf: "SC", tr: "TR817970", tt: "TT818577", funcionario: "ALEXANDRE MENDES PEREIRA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR687140", tt: "TT687140", funcionario: "ARLEN VALDIR ZUCHO", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR817132", tt: "TT821514", funcionario: "GUILHERME COSTA MOREIRA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR819750", tt: "TT823284", funcionario: "IGOR ROBERTO SENA PAES", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR817749", tt: "TT817615", funcionario: "IVAN DE SOUSA OLIVEIRA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR817971", tt: "TT818725", funcionario: "KELVER JONATHAN NASCIMENTO DINIZ", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR695690", tt: "TT695690", funcionario: "LEONARDO DUARTE GOMES", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR560731", tt: "TT560731", funcionario: "PASCOAL COAN", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR733308", tt: "TT733308", funcionario: "RICARDO BADIO", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TT156528", tt: "TT156528", funcionario: "ROBSON ROBERTO REIS", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR123986", tt: "TT123986", funcionario: "SIDNEI LACERDA DA ROSA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR820187", tt: "TT824019", funcionario: "THIAGO ROCHA FERREIRA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR780145", tt: "TT780145", funcionario: "VERISMAR ATNAN ALVES DOS SANTOS", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR790151", tt: "TT790151", funcionario: "EDINALDO RIBEIRO BENEDITO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR535090", tt: "TT535090", funcionario: "EZIO SILVA CABRAL JUNIOR", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR751389", tt: "TT751389", funcionario: "VITOR AUGUSTO DIAS CAMARA", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TC004017", tt: "TT004017", funcionario: "ANDRE LUIZ LOPES DE SA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR540153", tt: "TT540153", funcionario: "IGOR LUCAS RUCHINSKI", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR044101", tt: "TT827898", funcionario: "CLAUDINEI DA SILVA HERCULANO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR612597", tt: "TT612597", funcionario: "FABIO VELOZO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR790152", tt: "TT790152", funcionario: "FRANCISCO EDUARDO DA ROZA", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR393853", tt: "TT818693", funcionario: "JOCENIR DA COSTA CHAVES", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR610570", tt: "TT610570", funcionario: "LENOIR CEOLIN", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR695691", tt: "TT695691", funcionario: "MAICON JUNIOR DUARTE", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR687177", tt: "TT687177", funcionario: "MARCOS PAULO DE BORBA", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR819189", tt: "TT822113", funcionario: "RAFAEL RAUL DOS SANTOS", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR810589", tt: "TT822591", funcionario: "RONNIE JOSE GRANADO DELGADO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR634889", tt: "TT634889", funcionario: "THAFNYS DOS SANTOS ORTEGA", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR798462", tt: "TT798462", funcionario: "THIAGO AZEVEDO MORENO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR798463", tt: "TT798463", funcionario: "TIAGO TAVARES", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR819638", tt: "TT822852", funcionario: "WILDERLEI DOS SANTOS DE CARVALHO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR821741", tt: "TT828849", funcionario: "LUCAS PADILHA DOS SANTOS", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR801349", tt: "TT801349", funcionario: "BRENO DA SILVA CRUZ", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR819825", tt: "TT823367", funcionario: "EDIELSON ROBERTO PARRONCHI", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR408223", tt: "TT829090", funcionario: "MARCOS TAVARES", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR383337", tt: "TT829510", funcionario: "RODRIGO ROSA DA CONCEICAO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR578678", tt: "TT810210", funcionario: "JULIANO NECKEL", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.OESTE.CCO.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR536003", tt: "TT536003", funcionario: "NAILOR VAIME BELTRAME", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.OESTE.CCO.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR011326", tt: "TT011326", funcionario: "RENI LUIS BALLEN", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.OESTE.CCO.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TC031504", tt: "TT822851", funcionario: "ROGERIO LOURENCO PEREIRA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.OESTE.CCO.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR011124", tt: "TT011124", funcionario: "CARLOS TADEU MOTA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "PALHOCA" },
+            { uf: "SC", tr: "TR819630", tt: "TT822848", funcionario: "EWERTON AFONSO AMARAL OLIVEIRA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR585339", tt: "TT818532", funcionario: "ALCIONE LOPES DE LIZ", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR817746", tt: "TT817606", funcionario: "CHARLES DE LIMA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR741362", tt: "TT741362", funcionario: "DYEMES THEODORO PADILHA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "CHAPECO" },
+            { uf: "SC", tr: "TR711475", tt: "TT711475", funcionario: "ROGER OLIVEIRA DE JESUS", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "LAGES" },
+            { uf: "SC", tr: "TR520967", tt: "TT827900", funcionario: "LEONARDO NUNES MELLEGARI", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "LAGES" },
+            { uf: "SC", tr: "TR729705", tt: "TT729705", funcionario: "PAULO SERGIO LIMA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "LAGES" },
+            { uf: "SC", tr: "TR818779", tt: "TT821257", funcionario: "ISMEL ROSABALES CANIZARES", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.CUA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR500504", tt: "TT500504", funcionario: "JULIANO MACHADO MEDEIROS", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.CUA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR069663", tt: "TT069663", funcionario: "ALEXANDRE DE SOUZA JOVINO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.TUB.11", coordenador: "MAURI DUTRA", municipio: "TUBARAO" },
+            { uf: "SC", tr: "TR819549", tt: "TT822649", funcionario: "JOSE ANTONIO MEDEIROS", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.TUB.11", coordenador: "MAURI DUTRA", municipio: "LAGES" },
+            { uf: "SC", tr: "TR818778", tt: "TT820850", funcionario: "ERIEL RODRIGUES GOMEZ", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.YCA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR069683", tt: "TT820849", funcionario: "MAICON COLOMBO ZEFERINO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.CUA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR571422", tt: "TT823208", funcionario: "MARILDO ALEXSANDRO CRESTANI", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR741363", tt: "TT741363", funcionario: "ELESSANDRO DA SILVA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "SAO JOSE" },
+            { uf: "SC", tr: "TR729702", tt: "TT729702", funcionario: "ERITON CORREA", supervisor: "FABIO ROBERTO VERONICA", setor: "SC.PLA.LGS.11", coordenador: "MAURI DUTRA", municipio: "LAGES" },
+            { uf: "SC", tr: "TR535900", tt: "TT535900", funcionario: "ANDRE LUIS ALVES RANGEL", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR747901", tt: "TT817563", funcionario: "CAIO BENJO REIS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR817614", tt: "TT827899", funcionario: "HUGO ROBERTO SILVA DO NASCIMENTO", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR817748", tt: "TT817614", funcionario: "HUGO SANTOS DALTRO", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR709217", tt: "TT822850", funcionario: "MARCELO GOMES FREITAS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR645842", tt: "TT645842", funcionario: "MATEUS FERNANDES DE SOUZA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR738178", tt: "TT738178", funcionario: "THIAGO SCHUMANN BAMFI", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR821742", tt: "TT828852", funcionario: "MARCOS CORDEIRO DELGADO", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR821740", tt: "TT828848", funcionario: "LUCAS DE JESUS MARTINS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR821745", tt: "TT829088", funcionario: "ADRIANO DOS SANTOS GONCALVES", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR498678", tt: "TT498678", funcionario: "GIAM PIHETRO JEFTE SOARES DA SILVA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR608428", tt: "TT608428", funcionario: "ANDRE DE PROENCA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR555862", tt: "TT555862", funcionario: "EDSON DE SOUSA FONTES", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR785766", tt: "TT785766", funcionario: "THALLES ALVES DE OLIVEIRA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR818956", tt: "TT821512", funcionario: "CARLOS DINIZ DA SILVA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR789009", tt: "TT789009", funcionario: "JHON JARLEI OROBIO GAMBOA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "INDAIAL" },
+            { uf: "SC", tr: "TR709235", tt: "TT824641", funcionario: "ANDERSON RODRIGO DA COSTA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR578775", tt: "TT578775", funcionario: "CLOVIS GOIS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR699694", tt: "TT699694", funcionario: "DAVID FERNANDES DOS SANTOS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR010661", tt: "TT010661", funcionario: "DOMENICO CISZ", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR625056", tt: "TT625056", funcionario: "EDERSON PAZ CARRION", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR819629", tt: "TT822847", funcionario: "EDUARDO DANIEL KUHNEN", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR647818", tt: "TT647818", funcionario: "FELIPE RIZZOTTO", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR736827", tt: "TT736827", funcionario: "JOAO PAULO MERETIKA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR802948", tt: "TT802948", funcionario: "MARCOS ROBERTO CORREA DA SILVA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR682777", tt: "TT682777", funcionario: "RONALD RIBAS DE RIBAS", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR800405", tt: "TT800405", funcionario: "THIAGO TONN", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TT119205", tt: "TT119205", funcionario: "VALDECIR MOTTA", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.12", coordenador: "MAURI DUTRA", municipio: "GUABIRUBA" },
+            { uf: "SC", tr: "TR819007", tt: "TT821636", funcionario: "ANDRE ROLDAO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR615873", tt: "TT615873", funcionario: "CARLOS ERICO DOS SANTOS SILVA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR514450", tt: "TT821607", funcionario: "FABIO GONCALVES DE ANDRADE", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR711572", tt: "TT711572", funcionario: "JEFFERSON LUIS RENGEL", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR699710", tt: "TT699710", funcionario: "LUANDERSON CAZUMBA BARBOSA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR537408", tt: "TT537408", funcionario: "RAFAEL DE MENEZES PEREIRA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR615592", tt: "TT615592", funcionario: "RODRIGO BUGILA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR789238", tt: "TT789238", funcionario: "OTO RENATO DO PRADO", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "9", tt: "TT829511", funcionario: "WESLEY SOUZA DOS SANTOS", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL1.BQE.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "TR182495", tt: "TT182495", funcionario: "ANDERSON FELIPE CALEGARI", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR619042", tt: "TT619042", funcionario: "CARLOS ANTONIO POSSAMAI", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.RSL.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR821242", tt: "TT826816", funcionario: "EMERSON ACACIO NAZARIO", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.RSL.11", coordenador: "MAURI DUTRA", municipio: "BRUSQUE" },
+            { uf: "SC", tr: "TR537702", tt: "TT826817", funcionario: "EVELTON AMARAL DOS SANTOS", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.BCU.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "RIO DO SUL" },
+            { uf: "SC", tr: "TR820009", tt: "TT823770", funcionario: "MATHEUS ABILIO DA COSTA BOGA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR818780", tt: "TT820852", funcionario: "WARLEY BARBOSA DOS SANTOS", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR018009", tt: "TT018009", funcionario: "JONAS SILVA NUNES", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.CUA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR134058", tt: "TT134058", funcionario: "VALDIRAN DA SILVA LEITE", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.CUA.11", coordenador: "MAURI DUTRA", municipio: "CRICIUMA" },
+            { uf: "SC", tr: "TR680326", tt: "TT680326", funcionario: "ADRIANO CARLOS DE OLIVEIRA BARBOSA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "RIO DO SUL" },
+            { uf: "SC", tr: "TR597558", tt: "TT597558", funcionario: "AMAURI FRANCISCO CARDOZO", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "BALNEARIO CAMBORIU" },
+            { uf: "SC", tr: "TR003232", tt: "TT003232", funcionario: "DANIEL MARINHO BATISTA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR800397", tt: "TT800397", funcionario: "FELIPE DE SOUZA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR699705", tt: "TT699705", funcionario: "JEAN FRANCISCO FRANCO DE CAMARGO", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR687181", tt: "TT687181", funcionario: "MAYCON PASSOS DA SILVA ROSA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR819746", tt: "TT823272", funcionario: "TIAGO FELIPE SOUZA SANTOS MAGNO", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR818218", tt: "TT819046", funcionario: "VINICIUS DE SOUZA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.BCU.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR819751", tt: "TT823285", funcionario: "WELITON BATISTA MELO", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR632093", tt: "TT632093", funcionario: "WILLIAMS JOSE SILVA DOS SANTOS", supervisor: "TIAGO PEREIRA FRANCA", setor: "SC.NORTE.JVE.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR314446", tt: "10", funcionario: "MAYCKON HENRIQUE CASAS CORDOVA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR804338", tt: "TT804338", funcionario: "ALEXANDRE WILLIAN DE SOUZA", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR820150", tt: "TT823882", funcionario: "DANIEL FIGUEIREDO NEVES", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR705853", tt: "TT705853", funcionario: "EDIVAN GUIMARAES DA SILVA NETO", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR800399", tt: "TT800399", funcionario: "JEFRI AYRES DA CRUZ", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR003453", tt: "TT003453", funcionario: "MARCOS VENICIO BERNARDES", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR750221", tt: "TT750221", funcionario: "WANDERLEI FIGUEIREDO NEVES", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.12", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR386095", tt: "TT386095", funcionario: "CRISTIANO GROSSKOPF", supervisor: "CARLOS ROGERIO DA SILVA", setor: "SC.VL2.IAI.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "ITAJAI" },
+            { uf: "SC", tr: "TR597559", tt: "TT597559", funcionario: "ANDERSON RODRIGUES CHAGAS", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.NVG.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "NAVEGANTES" },
+            { uf: "SC", tr: "TR549443", tt: "TT549443", funcionario: "MARCELO ALVES CUSTODIO", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.NVG.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "NAVEGANTES" },
+            { uf: "SC", tr: "TR775911", tt: "TT775911", funcionario: "PABLO RIBEIRO DA SILVA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.NVG.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "NAVEGANTES" },
+            { uf: "SC", tr: "TR679747", tt: "TT679747", funcionario: "FREDERICO STUMPF", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "MAURI DUTRA", municipio: "BLUMENAU" },
+            { uf: "SC", tr: "TR621718", tt: "TT817779", funcionario: "WELLERSON FRANKLIN DE ALMEIDA SILVA", supervisor: "DANIEL OLIVEIRA", setor: "SC.NORTE.JVE.11", coordenador: "JUNIOMAR MOCHNACZ", municipio: "JOINVILLE" },
+            { uf: "SC", tr: "TR134056", tt: "TT134056", funcionario: "RANGEL DA SILVA PATRICIO", supervisor: "CASSIO RICARDO FERNANDES AVILA", setor: "SC.SUL.TUB.11", coordenador: "MAURI DUTRA", municipio: "TUBARAO" },
+            { uf: "SC", tr: "20", tt: "16", funcionario: "FRANCINEUDO DA SILVA SOUSA", supervisor: "ROBERTO DE SOUZA JUNIOR", setor: "SC.VL2.IAI.11", coordenador: "", municipio: "" },
+            { uf: "SC", tr: "21", tt: "17", funcionario: "PAULO ROBERTO DOS SANTOS MORAES", supervisor: "WILLIAN DIAS VAZ", setor: "SC.VL1.BNU.11", coordenador: "", municipio: "" }
         ];
 
         // Elementos
@@ -1000,9 +1155,15 @@
         let conferenteSignaturePad = null;
         let qrScanning = false;
 
+        // Função para extrair lista única de supervisores
+        function getSupervisores() {
+            const supervisores = [...new Set(tecnicosData.map(t => t.supervisor))].filter(s => s && s.trim() !== '');
+            return supervisores.sort((a, b) => a.localeCompare(b));
+        }
+
         // Inicializar supervisores
         function inicializarSupervisores() {
-            const supervisores = [...new Set(tecnicosData.map(t => t.supervisor))].filter(s => s).sort();
+            const supervisores = getSupervisores();
             supervisorFilter.innerHTML = '<option value="">Todos os Supervisores</option>';
             supervisores.forEach(sup => {
                 const option = document.createElement('option');
@@ -1012,17 +1173,33 @@
             });
         }
 
-        // Atualizar técnicos
+        // Função para obter técnicos únicos por TR
+        function getTecnicosUnicos(array) {
+            const map = new Map();
+            array.forEach(item => {
+                if (item.tr && item.tr.trim() !== '') {
+                    map.set(item.tr, item);
+                }
+            });
+            return Array.from(map.values());
+        }
+
+        // Atualizar técnicos baseado no supervisor selecionado
         function atualizarTecnicos() {
             const supervisor = supervisorFilter.value;
-            let tecnicosFiltrados = tecnicosData;
+            let tecnicosFiltrados = [];
             
-            if (supervisor) {
+            if (!supervisor) {
+                // Se "Todos os Supervisores", mostra todos os técnicos únicos
+                tecnicosFiltrados = getTecnicosUnicos(tecnicosData);
+            } else {
+                // Filtra pelo supervisor selecionado
                 tecnicosFiltrados = tecnicosData.filter(t => t.supervisor === supervisor);
+                tecnicosFiltrados = getTecnicosUnicos(tecnicosFiltrados);
             }
             
-            tecnicosFiltrados = [...new Map(tecnicosFiltrados.map(t => [t.tr, t])).values()]
-                .sort((a, b) => a.funcionario.localeCompare(b.funcionario));
+            // Ordena por nome
+            tecnicosFiltrados.sort((a, b) => a.funcionario.localeCompare(b.funcionario));
             
             tecnicoFilter.innerHTML = '<option value="">Selecione um técnico</option>';
             tecnicosFiltrados.forEach(tec => {
@@ -1031,6 +1208,9 @@
                 option.textContent = `${tec.funcionario} (${tec.tr})`;
                 tecnicoFilter.appendChild(option);
             });
+            
+            // Se não houver técnicos, desabilita o select
+            tecnicoFilter.disabled = tecnicosFiltrados.length === 0;
         }
 
         // Selecionar técnico
@@ -1041,11 +1221,13 @@
             currentTecnico = tecnico;
             
             tecnicoInfo.innerHTML = `
+                <div class="info-item"><span class="label">UF</span><span class="value">${tecnico.uf}</span></div>
                 <div class="info-item"><span class="label">Funcionário</span><span class="value">${tecnico.funcionario}</span></div>
                 <div class="info-item"><span class="label">TR</span><span class="value">${tecnico.tr}</span></div>
                 <div class="info-item"><span class="label">TT</span><span class="value">${tecnico.tt}</span></div>
                 <div class="info-item"><span class="label">Supervisor</span><span class="value">${tecnico.supervisor}</span></div>
                 <div class="info-item"><span class="label">Setor</span><span class="value">${tecnico.setor}</span></div>
+                <div class="info-item"><span class="label">Coordenador</span><span class="value">${tecnico.coordenador || '-'}</span></div>
                 <div class="info-item"><span class="label">Município</span><span class="value">${tecnico.municipio || '-'}</span></div>
             `;
             
@@ -1216,7 +1398,7 @@
             
             tecnicoSignaturePad = new SignaturePad(tecnicoSignature, {
                 backgroundColor: 'rgb(255, 255, 255)',
-                penColor: '#000000', // Preto puro
+                penColor: '#000000',
                 minWidth: 1,
                 maxWidth: 2.5
             });
@@ -1231,7 +1413,7 @@
             
             conferenteSignaturePad = new SignaturePad(conferenteSignature, {
                 backgroundColor: 'rgb(255, 255, 255)',
-                penColor: '#000000', // Preto puro
+                penColor: '#000000',
                 minWidth: 1,
                 maxWidth: 2.5
             });
@@ -1469,7 +1651,7 @@
             }
         });
 
-        // Export PDF com assinaturas centralizadas
+        // Export PDF
         exportPDF.addEventListener('click', async () => {
             if (!currentTecnico) return;
             
@@ -1497,7 +1679,7 @@
             doc.line(15, 30, 195, 30);
             
             // DADOS DO TÉCNICO - Título
-            doc.setTextColor(0, 0, 0); // Preto
+            doc.setTextColor(0, 0, 0);
             doc.setFontSize(14);
             doc.setFont('helvetica', 'bold');
             doc.text('DADOS DO TÉCNICO', 15, 45);
@@ -1507,33 +1689,37 @@
             doc.setFont('helvetica', 'bold');
             
             // Coluna 1
-            doc.text('Funcionário:', 15, 55);
-            doc.text('Supervisor:', 15, 63);
+            doc.text('UF:', 15, 55);
+            doc.text('Funcionário:', 15, 63);
             doc.text('TR:', 15, 71);
+            doc.text('Supervisor:', 15, 79);
             
             // Coluna 2
-            doc.text('Setor:', 120, 55);
-            doc.text('TT:', 120, 63);
-            doc.text('Município:', 120, 71);
+            doc.text('TT:', 120, 55);
+            doc.text('Setor:', 120, 63);
+            doc.text('Coordenador:', 120, 71);
+            doc.text('Município:', 120, 79);
             
             // Valores
             doc.setFont('helvetica', 'normal');
-            doc.text(currentTecnico.funcionario, 50, 55);
-            doc.text(currentTecnico.supervisor, 50, 63);
-            doc.text(currentTecnico.tr, 50, 71);
+            doc.text(currentTecnico.uf, 30, 55);
+            doc.text(currentTecnico.funcionario, 50, 63);
+            doc.text(currentTecnico.tr, 30, 71);
+            doc.text(currentTecnico.supervisor, 50, 79);
             
-            doc.text(currentTecnico.setor, 145, 55);
-            doc.text(currentTecnico.tt, 145, 63);
-            doc.text(currentTecnico.municipio || '-', 160, 71);
+            doc.text(currentTecnico.tt, 135, 55);
+            doc.text(currentTecnico.setor, 145, 63);
+            doc.text(currentTecnico.coordenador || '-', 160, 71);
+            doc.text(currentTecnico.municipio || '-', 150, 79);
             
             // CONFERENTE RESPONSÁVEL
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(14);
-            doc.text('CONFERENTE RESPONSÁVEL', 15, 90);
+            doc.text('CONFERENTE RESPONSÁVEL', 15, 100);
             
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
-            doc.text(`Nome: ${nomeConferente}`, 15, 100);
+            doc.text(`Nome: ${nomeConferente}`, 15, 110);
             
             // TABELA DE ITENS
             const tableData = registro.itens.map((item, index) => [
@@ -1544,7 +1730,7 @@
             ]);
             
             doc.autoTable({
-                startY: 115,
+                startY: 125,
                 head: [['Item', 'Número Serial', 'Verificado', 'Foto']],
                 body: tableData,
                 theme: 'grid',
@@ -1560,7 +1746,7 @@
                     cellPadding: 5,
                     halign: 'center',
                     valign: 'middle',
-                    textColor: [0, 0, 0] // Preto
+                    textColor: [0, 0, 0]
                 },
                 columnStyles: {
                     0: { cellWidth: 20 },
@@ -1577,10 +1763,8 @@
             const itensComFoto = registro.itens.filter(i => i.foto);
             
             if (itensComFoto.length > 0) {
-                // Adicionar página para as fotos
                 doc.addPage();
                 
-                // Cabeçalho da página de fotos
                 doc.setFillColor(32, 58, 67);
                 doc.rect(0, 0, 210, 25, 'F');
                 
@@ -1594,11 +1778,9 @@
                 
                 registro.itens.forEach((item, index) => {
                     if (item.foto) {
-                        // Calcular posição (2 fotos por página)
                         if (fotoCount === 2) {
                             doc.addPage();
                             
-                            // Cabeçalho da nova página
                             doc.setFillColor(32, 58, 67);
                             doc.rect(0, 0, 210, 25, 'F');
                             
@@ -1611,27 +1793,22 @@
                             fotoCount = 0;
                         }
                         
-                        // Posição X (esquerda ou direita)
                         const fotoX = fotoCount === 0 ? 15 : 110;
                         
-                        // Moldura da foto
                         doc.setDrawColor(100, 100, 100);
                         doc.setFillColor(245, 245, 245);
                         doc.roundedRect(fotoX, fotoY, 85, 100, 5, 5, 'FD');
                         
-                        // Título da foto
-                        doc.setTextColor(0, 0, 0); // Preto
+                        doc.setTextColor(0, 0, 0);
                         doc.setFontSize(12);
                         doc.setFont('helvetica', 'bold');
                         doc.text(`ITEM ${index + 1}`, fotoX + 30, fotoY - 3);
                         
-                        // Informações do item
                         doc.setFontSize(9);
                         doc.setFont('helvetica', 'normal');
                         doc.text(`Serial: ${item.serial || '---'}`, fotoX + 5, fotoY + 105);
                         doc.text(`Verif: ${item.verificado ? 'SIM' : 'NÃO'}`, fotoX + 5, fotoY + 112);
                         
-                        // Adicionar a foto
                         try {
                             doc.addImage(item.foto, 'JPEG', fotoX + 3, fotoY + 3, 79, 94);
                         } catch (e) {
@@ -1654,7 +1831,6 @@
             // ASSINATURAS
             doc.addPage();
             
-            // Título da seção de assinaturas
             doc.setFillColor(32, 58, 67);
             doc.rect(0, 0, 210, 25, 'F');
             
@@ -1665,30 +1841,26 @@
             
             const assinaturaY = 45;
             
-            // Fundo para assinaturas
             doc.setFillColor(245, 245, 245);
             doc.roundedRect(15, assinaturaY, 180, 90, 5, 5, 'F');
             doc.setDrawColor(32, 58, 67);
             doc.setLineWidth(1);
             doc.roundedRect(15, assinaturaY, 180, 90, 5, 5, 'S');
             
-            // Linha divisória vertical
             doc.setDrawColor(32, 58, 67);
             doc.setLineWidth(0.5);
             doc.line(105, assinaturaY + 5, 105, assinaturaY + 85);
             
-            // ASSINATURA DO TÉCNICO (lado esquerdo) - TOTALMENTE CENTRALIZADA
-            doc.setTextColor(0, 0, 0); // Preto
+            // ASSINATURA DO TÉCNICO
+            doc.setTextColor(0, 0, 0);
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(16);
             doc.text('TÉCNICO', 60, assinaturaY + 15, { align: 'center' });
             
-            // Espaço para assinatura do técnico - centralizado
-            const tecX = 60; // Centro da metade esquerda
+            const tecX = 60;
             if (tecnicoSignaturePad && !tecnicoSignaturePad.isEmpty()) {
                 try {
                     const tecSig = tecnicoSignaturePad.toDataURL();
-                    // Posicionar a imagem centralizada
                     doc.addImage(tecSig, 'PNG', tecX - 35, assinaturaY + 20, 70, 25);
                 } catch (e) {}
             } else {
@@ -1697,29 +1869,26 @@
                 doc.text('(assinatura pendente)', tecX, assinaturaY + 35, { align: 'center' });
             }
             
-            // Status da assinatura do técnico - centralizado
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(11);
             if (tecnicoInfoSign.classList.contains('active')) {
-                doc.setTextColor(0, 0, 0); // Preto
+                doc.setTextColor(0, 0, 0);
                 doc.text('Assinatura validada', tecX, assinaturaY + 65, { align: 'center' });
             } else {
                 doc.setTextColor(150, 150, 150);
                 doc.text('(assinatura pendente)', tecX, assinaturaY + 65, { align: 'center' });
             }
             
-            // ASSINATURA DO CONFERENTE (lado direito) - TOTALMENTE CENTRALIZADA
-            doc.setTextColor(0, 0, 0); // Preto
+            // ASSINATURA DO CONFERENTE
+            doc.setTextColor(0, 0, 0);
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(16);
             doc.text('CONFERENTE', 150, assinaturaY + 15, { align: 'center' });
             
-            // Espaço para assinatura do conferente - centralizado
-            const confX = 150; // Centro da metade direita
+            const confX = 150;
             if (conferenteSignaturePad && !conferenteSignaturePad.isEmpty()) {
                 try {
                     const confSig = conferenteSignaturePad.toDataURL();
-                    // Posicionar a imagem centralizada
                     doc.addImage(confSig, 'PNG', confX - 35, assinaturaY + 20, 70, 25);
                 } catch (e) {}
             } else {
@@ -1728,11 +1897,10 @@
                 doc.text('(assinatura pendente)', confX, assinaturaY + 35, { align: 'center' });
             }
             
-            // Status da assinatura do conferente - centralizado
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(11);
             if (conferenteInfoSign.classList.contains('active')) {
-                doc.setTextColor(0, 0, 0); // Preto
+                doc.setTextColor(0, 0, 0);
                 doc.text('Assinatura validada', confX, assinaturaY + 65, { align: 'center' });
             } else {
                 doc.setTextColor(150, 150, 150);
@@ -1762,6 +1930,7 @@
         resetFilters.addEventListener('click', () => {
             supervisorFilter.value = '';
             tecnicoFilter.innerHTML = '<option value="">Selecione um técnico</option>';
+            tecnicoFilter.disabled = false;
             tecnicoContent.style.display = 'none';
             currentTecnico = null;
             atualizarTecnicos();
